@@ -6,7 +6,7 @@ namespace Oh_Fortuna
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Oh
         }
     }
 }
