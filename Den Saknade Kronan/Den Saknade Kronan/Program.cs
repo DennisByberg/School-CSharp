@@ -28,6 +28,20 @@ namespace Den_Saknade_Kronan
             Console.WriteLine($"Tjalle har nu {tjalle}");
             Console.WriteLine($"Och får tillbaka {kvarEfterKöp}");
             Console.WriteLine();
+
+            Console.WriteLine($"De delar så att de får en krona var");
+            kalle++;
+            pelle++;
+            tjalle++;
+            kvarEfterKöp -= 3;
+            rödaKorset += kvarEfterKöp;
+            Console.WriteLine($"Kalle har nu {kalle}");
+            Console.WriteLine($"Pelle har nu {pelle}");
+            Console.WriteLine($"Tjalle har nu {tjalle}");
+            Console.WriteLine($"Och donerar {kvarEfterKöp} till Röda korset");
+            kvarEfterKöp = 0;
+            Console.WriteLine();
+
         }
     }
 }
