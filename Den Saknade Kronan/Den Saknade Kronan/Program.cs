@@ -43,12 +43,26 @@ namespace Den_Saknade_Kronan
             Console.WriteLine();
 
             Console.WriteLine($"Summa summarum:");
-            int utlägg = (10 - 1) * 3;
-            Console.WriteLine($"De betalade 10 - 1 kronor var, alltså 9*3 = {utlägg} kronor");
-            Console.WriteLine($"och donerade 2 kronor");
-            utlägg += 2;
+
+            //int utlägg = (10 - 1) * 3; // Gammal kod
+            int utlägg = 9 * 3; // Ny Kod
+
+            //Console.WriteLine($"De betalade 10 - 1 kronor var, alltså 9*3 = {utlägg} kronor");
+            Console.WriteLine($"De betalade 9 kronor var, alltså 9*3 = {utlägg} kronor (inkl dricks)"); // Ny Kod
+
+            //Console.WriteLine($"och donerade 2 kronor"); // Gammal Kod
+            Console.WriteLine($"Dom får tillbaks 1kr var"); // Ny Kod
+
+            //utlägg += 2; // Gammal Kod
+            utlägg += 3; // Ny Kod
+
             Console.WriteLine($"Summan blir då: {utlägg}");
-            if (utlägg != 30) Console.WriteLine($"Error 404: Krona not found");
+            //if (utlägg != 30) Console.WriteLine($"Error 404: Krona not found");
+
+
+
+
+            Console.ReadLine();
         }
     }
 }
