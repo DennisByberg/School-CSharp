@@ -17,6 +17,17 @@ namespace Den_Saknade_Kronan
             Console.WriteLine($"Pelle har {pelle}");
             Console.WriteLine($"Tjalle har {tjalle}");
             Console.WriteLine();
+
+            Console.WriteLine($"De betalar {kalle + pelle + tjalle}");
+            int kvarEfterKöp = (kalle + pelle + tjalle) - bullar;
+            kalle -= 10;
+            pelle -= 10;
+            tjalle -= 10;
+            Console.WriteLine($"Kalle har nu {kalle}");
+            Console.WriteLine($"Pelle har nu {pelle}");
+            Console.WriteLine($"Tjalle har nu {tjalle}");
+            Console.WriteLine($"Och får tillbaka {kvarEfterKöp}");
+            Console.WriteLine();
         }
     }
 }
