@@ -17,7 +17,7 @@ namespace Oh_Fortuna
 
             // Välkomstskärm till programmet
             Console.WriteLine("+-----------------------------------------------+");
-            Console.WriteLine("| Lets Play Oh Fortuna! du startar med 500 Pix! |");
+            Console.WriteLine("| Lets Play Oh Fortuna! du startar med 500 Pix. |");
             Console.WriteLine("+-----------------------------------------------+");
 
             // Start av programmet
