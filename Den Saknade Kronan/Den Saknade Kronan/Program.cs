@@ -6,7 +6,7 @@ namespace Den_Saknade_Kronan
     {
         static void Main(string[] args)
         {
-            int bullar = 25; // pris
+            int bullar = 25; // Pris
             int kalle = 10; // Cash
             int pelle = 10; // Cash
             int tjalle = 10;// Cash
