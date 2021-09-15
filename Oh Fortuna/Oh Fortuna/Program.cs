@@ -33,7 +33,7 @@ namespace Oh_Fortuna
                 if (bet > userPix)
 
                 {
-                    Console.WriteLine("Du kan inte satsa mer än vad du har.\n");
+                    Console.WriteLine("Du kan inte satsa mer än vad du har.");
                     bet = 0;
 
                     continue;
@@ -77,12 +77,10 @@ namespace Oh_Fortuna
                 }
                 else
                 {
-                    Console.WriteLine("\nDu hade tyvärr inga rätt denna gången!\n");
+                    Console.WriteLine("Du hade tyvärr inga rätt denna gången!\n");
                 }
 
-                Console.WriteLine("+----------------+", userPix);
-                Console.WriteLine("| Antal Pix: {0} |", userPix);
-                Console.WriteLine("+----------------+", userPix);
+                Console.WriteLine("\nDu har nu {0} pix", userPix);
 
                 sameNumber = 0;
                 bet = 0;
@@ -90,7 +88,7 @@ namespace Oh_Fortuna
 
             if (userPix < 50)
             {
-                Console.WriteLine("Du har för lite pengar tyvärr, välkommen åter!");
+                Console.WriteLine("Du har för lite pix kvar för att spela, välkommen åter!");
             }
         }
     }
