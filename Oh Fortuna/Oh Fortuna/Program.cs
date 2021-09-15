@@ -6,7 +6,6 @@ namespace Oh_Fortuna
     {
         static void Main(string[] args)
         {
-
             var userPix = 500;
             var bet = 0;
             var number = 0;
@@ -16,12 +15,14 @@ namespace Oh_Fortuna
             int[] slumpTal = new int[dices];
             Random rnd = new Random();
 
+            // Välkomstskärm till programmet
+            Console.WriteLine("+-----------------------------------------------+");
+            Console.WriteLine("| Lets Play Oh Fortuna! du startar med 500 Pix! |");
+            Console.WriteLine("+-----------------------------------------------+");
 
+            // Start av programmet
             while (userPix >= 50)
             {
-                Console.WriteLine("+-----------------------------------------------+");
-                Console.WriteLine("| Lets Play Oh Fortuna! du startar med 500 Pix! |");
-                Console.WriteLine("+-----------------------------------------------+");
 
                 if (bet == 0)
                 {
