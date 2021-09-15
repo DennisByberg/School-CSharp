@@ -6,7 +6,7 @@ namespace Långbord
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hur många bord har ni?");
+            Console.WriteLine("Hur många bord har ni??");
 
             int.TryParse(Console.ReadLine(), out int svar);
 
