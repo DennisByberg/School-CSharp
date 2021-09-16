@@ -1,22 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EnumLätt.Veckodagar
+﻿namespace EnumLätt.Veckodagar
 {
-    class Veckodagar
+    enum VeckoDagar
     {
-        enum VeckoDagar
-        {
-            Måndag = 1,
-            Tisdag,
-            Onsdag,
-            Torsdag,
-            Fredag,
-            Lördag,
-            Söndag
-        }
+        Måndag = 1,
+        Tisdag,
+        Onsdag,
+        Torsdag,
+        Fredag,
+        Lördag,
+        Söndag
     }
 }
