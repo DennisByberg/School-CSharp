@@ -7,21 +7,22 @@ namespace Oh_Fortuna
     {
         static void Main(string[] args)
         {
-            // Variabler
-            int userPix = 500;
+            // Variabler.
+            int userPix = 500; // Antal Pix du startar med.
             int bet = 0;
             int number = 0;
-            int dices = 3;
+            int diceAmount = 3; // Antal tärningar du kastar.
             int sameNumber = 0;
 
-            int[] slumpTal = new int[dices];
+            int[] randomNumber = new int[diceAmount];
             Random rnd = new Random();
 
-            // Välkommen
+            // Välkommen.
             Console.WriteLine("+---------------------------------------------+");
             Console.WriteLine("| WELCOME TO OH FORTUNA MADE MY DENNIS BYBERG |");
             Console.WriteLine("+---------------------------------------------+");
 
+            // Ange ditt användarnamn för ett mer personligt spelande.
             Console.Write("Please choose your username: ");
             string userName = Console.ReadLine();
             Console.Clear();
@@ -36,10 +37,10 @@ namespace Oh_Fortuna
             Console.Write(".");
             Console.Clear();
 
-            // Nu kör vi!
+            
             while (userPix >= 50)
             {
-
+                // Anger hur mycket vi vill betta.
                 if (bet == 0)
                 {
                     Console.WriteLine($"How many Pix do you want to bet? | Pix Available: {userPix} |");
@@ -60,6 +61,7 @@ namespace Oh_Fortuna
                     continue;
                 }
 
+                // Ange ditt nummer du vill spela på.
                 Console.WriteLine("\nPick your lucky number between (1-6)?");
                 int.TryParse(Console.ReadLine(), out number);
 
@@ -79,19 +81,21 @@ namespace Oh_Fortuna
 
                 userPix -= bet;
 
-                for (int i = 0; i < dices; ++i)
+                // Tärningar kastas och slumpas.
+                for (int i = 0; i < diceAmount; ++i)
                 {
-                    slumpTal[i] = rnd.Next(1, 7);
+                    randomNumber[i] = rnd.Next(1, 7);
                     Console.WriteLine("+--------------+");
-                    Console.WriteLine("|Tärning #{0}: {1} |", i + 1, slumpTal[i]);
+                    Console.WriteLine("|Tärning #{0}: {1} |", i + 1, randomNumber[i]);
                     Console.WriteLine("+--------------+");
 
-                    if (slumpTal[i] == number)
+                    if (randomNumber[i] == number)
                     {
                         sameNumber++;
                     }
                 }
 
+                // Skriver ut till konsollen om vi har RÄTT.
                 if (sameNumber > 0)
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
@@ -99,6 +103,8 @@ namespace Oh_Fortuna
                     userPix += (sameNumber + 1) * bet;
                     Console.ForegroundColor = ConsoleColor.White;
                 }
+
+                // Skriver ut till konsollen om vi har FEL. 
                 else
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
@@ -111,6 +117,7 @@ namespace Oh_Fortuna
                 sameNumber = 0;
                 bet = 0;
 
+                // Frågar om vi vill spela igen
                 if (userPix > 50)
                 {
                     Console.WriteLine("Do you want to play again? (y/n)");
@@ -134,11 +141,13 @@ namespace Oh_Fortuna
                         Console.Clear();
                     }
 
+                    // Om vi får mindre än 50 Pix kan vi inte spela igen... Hejdå.
                     if (userPix < 50)
                     {
                         Console.WriteLine($"Sorry {userName}! You dont have enough Pix to play!\nThanks for playing!");
+                        Thread.Sleep(2000);
+                        break;
                     }
-
                 }
             }
         }
