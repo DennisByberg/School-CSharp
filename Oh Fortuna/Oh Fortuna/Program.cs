@@ -9,12 +9,10 @@ namespace Oh_Fortuna
         {
             // Variabler.
             int userPix = 500; // Antal Pix du startar med.
-            int bet = 0;
+            int userBet = 0;
+            int userLuckyNum;
             int number = 0;
-            int diceAmount = 3; // Antal tärningar du kastar.
-            int sameNumber = 0;
-
-            int[] randomNumber = new int[diceAmount];
+            int dice;
             Random rnd = new Random();
 
             // Välkommen.
@@ -27,45 +25,43 @@ namespace Oh_Fortuna
             string userName = Console.ReadLine();
             Console.Clear();
             Console.Write($"Hi {userName}! Lets get started!\n\nLoading.");
-            Thread.Sleep(2000);
+            Thread.Sleep(1500);
             Console.Write(".");
-            Thread.Sleep(2000);
+            Thread.Sleep(1500);
             Console.Write(".");
-            Thread.Sleep(2000);
-            Console.Write(".");
-            Thread.Sleep(2000);
+            Thread.Sleep(1500);
             Console.Write(".");
             Console.Clear();
 
-            
+
             while (userPix >= 50)
             {
                 // Anger hur mycket vi vill betta.
-                if (bet == 0)
+                if (userBet == 0)
                 {
                     Console.WriteLine($"How many Pix do you want to bet? | Pix Available: {userPix} |");
-                    int.TryParse(Console.ReadLine(), out bet);
+                    int.TryParse(Console.ReadLine(), out userBet);
                 }
 
-                if (bet > userPix)
+                if (userBet > userPix)
                 {
                     Console.WriteLine("You don't have enough Pix.");
-                    bet = 0;
+                    userBet = 0;
                     continue;
                 }
 
-                if (bet < 50)
+                if (userBet < 50)
                 {
                     Console.WriteLine("You must bet atleast 50 Pix");
-                    bet = 0;
+                    userBet = 0;
                     continue;
                 }
 
                 // Ange ditt nummer du vill spela på.
                 Console.WriteLine("\nPick your lucky number between (1-6)?");
-                int.TryParse(Console.ReadLine(), out number);
+                int.TryParse(Console.ReadLine(), out userLuckyNum);
 
-                if (number > 6 || number < 1)
+                if (userLuckyNum > 6 || userLuckyNum < 1)
                 {
                     Console.WriteLine("Invalid Answer!");
                     continue;
@@ -79,28 +75,28 @@ namespace Oh_Fortuna
                 Thread.Sleep(500);
                 Console.Write(".\n");
 
-                userPix -= bet;
+                userPix -= userBet;
 
                 // Tärningar kastas och slumpas.
-                for (int i = 0; i < diceAmount; ++i)
+                for (int i = 0; i < 3; i++)
                 {
-                    randomNumber[i] = rnd.Next(1, 7);
-                    Console.WriteLine("+--------------+");
-                    Console.WriteLine("|Tärning #{0}: {1} |", i + 1, randomNumber[i]);
-                    Console.WriteLine("+--------------+");
+                    dice = rnd.Next(1, 7);
+                    Console.WriteLine("+-----------+");
+                    Console.WriteLine("|DICE #{0}: {1} |", i + 1, dice);
+                    Console.WriteLine("+-----------+");
 
-                    if (randomNumber[i] == number)
+                    if (dice == userLuckyNum)
                     {
-                        sameNumber++;
+                        number++;
                     }
                 }
 
                 // Skriver ut till konsollen om vi har RÄTT.
-                if (sameNumber > 0)
+                if (number > 0)
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("Nice throw " + userName + "!\nYou got {0} correct guess(es)! You win {1} pix!", sameNumber, (sameNumber + 1) * bet);
-                    userPix += (sameNumber + 1) * bet;
+                    Console.WriteLine("Nice throw " + userName + "!\nYou got {0} correct guess(es)! You win {1} pix!", number, (number + 1) * userBet);
+                    userPix += (number + 1) * userBet;
                     Console.ForegroundColor = ConsoleColor.White;
                 }
 
@@ -112,12 +108,13 @@ namespace Oh_Fortuna
                     Console.ForegroundColor = ConsoleColor.White;
                 }
 
+                // Antal Pix vi har att spela för.
                 Console.WriteLine($"\n| Pix Available: {userPix} |");
 
-                sameNumber = 0;
-                bet = 0;
+                number = 0;
+                userBet = 0;
 
-                // Frågar om vi vill spela igen
+                // Frågar om vi vill spela igen.
                 if (userPix > 50)
                 {
                     Console.WriteLine("Do you want to play again? (y/n)");
@@ -134,20 +131,15 @@ namespace Oh_Fortuna
                         Thread.Sleep(2000);
                         break;
                     }
-                    else
-                    {
-                        Console.WriteLine("Invalid Answer! (y/n)?");
-                        userAnswer = Console.ReadLine();
-                        Console.Clear();
-                    }
 
-                    // Om vi får mindre än 50 Pix kan vi inte spela igen... Hejdå.
+                    // Skriver ut och avslutar programmet om användaren har mindre än 50 Pix.
                     if (userPix < 50)
                     {
-                        Console.WriteLine($"Sorry {userName}! You dont have enough Pix to play!\nThanks for playing!");
+                        Console.WriteLine("\nYou dont have enought Pix left to play!");
+                        Console.WriteLine($"Thanks for playing my game {userName} and have a nice day!");
                         Thread.Sleep(2000);
-                        break;
                     }
+                    break;
                 }
             }
         }
