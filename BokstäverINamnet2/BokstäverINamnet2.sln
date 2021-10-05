@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BokstäverINamnet2", "BokstäverINamnet2\BokstäverINamnet2.csproj", "{A994C25C-7476-46C7-90CD-08F9CAAD488A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A994C25C-7476-46C7-90CD-08F9CAAD488A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A994C25C-7476-46C7-90CD-08F9CAAD488A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A994C25C-7476-46C7-90CD-08F9CAAD488A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A994C25C-7476-46C7-90CD-08F9CAAD488A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EBF51523-EA7E-452F-9954-128A3FA07EC1}
+	EndGlobalSection
+EndGlobal
