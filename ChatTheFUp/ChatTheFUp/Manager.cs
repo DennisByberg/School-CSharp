@@ -23,6 +23,8 @@ namespace ChatTheFUp
             {
                 // Huvudmeny.
                 Console.WriteLine("+------------------------+");
+                Console.WriteLine("|     CHAT THE F UP!     |");
+                Console.WriteLine("+------------------------+");
                 Console.WriteLine("|1 - View all persons    |");
                 Console.WriteLine("|2 - Add person          |");
                 Console.WriteLine("|3 - Edit person         |");
@@ -73,7 +75,7 @@ namespace ChatTheFUp
                 StartOption("    VIEW ALL PERSONS    ");
 
                 if (people.Count == 0)
-                    Console.WriteLine("No users registred. ");
+                    Console.WriteLine("No users registred. \n");
                 else
                     PrintAllUsers();
 
@@ -125,7 +127,7 @@ namespace ChatTheFUp
 
                     try
                     {
-                        Console.Write("\nInput the number of the user you want to edit: ");
+                        Console.Write("Input the number of the user you want to edit: ");
                         int indexNumber = Convert.ToInt32(Console.ReadLine());
                         indexNumber--;
 
@@ -234,7 +236,7 @@ namespace ChatTheFUp
                     {
                         people.RemoveAt(index);
                         Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine("\nPERSON SUCCESSFULLY REMOVED!");
+                        Console.WriteLine("\nPERSON SUCCESSFULLY REMOVED!\n");
                         Console.ForegroundColor = ConsoleColor.White;
                         FinishOption();
                     }
@@ -256,7 +258,7 @@ namespace ChatTheFUp
 
             public void FinishOption()
             {
-                Console.WriteLine("\nPress <ENTER> to return to the menu.");
+                Console.WriteLine("Press <ENTER> to return to the menu.");
                 Console.ReadLine();
                 Console.Clear();
             }
