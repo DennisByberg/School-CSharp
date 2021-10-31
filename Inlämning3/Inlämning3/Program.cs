@@ -19,7 +19,7 @@ namespace Inlämning3
 
             //Battles.FirstBattle();
 
-            while (player1.mods < 10 && mainLoop)
+            while (mainLoop)
             {
                 Shop.LoadShop(player1);
                 Battles.RandomBattle();

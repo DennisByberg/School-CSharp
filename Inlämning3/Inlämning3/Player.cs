@@ -17,7 +17,7 @@ namespace Inlämning3
         public int health { get; set; } = 10;
         public int damage { get; set; } = 1;
         public int armor { get; set; } = 0;
-        public int potion { get; set; } = 5;
+        public int potion { get; set; } = 1;
         public int weapon { get; set; } = 1;
         public int mods { get; set; } = 0;
 

@@ -100,7 +100,11 @@ namespace Inlämning3
                     System.Threading.Thread.Sleep(1100);
                     Program.player1.health -= damage;
                     h -= attack;
-                    continue;
+
+                    if (Program.player1.health > 0)
+                    {
+                        continue;
+                    }
                 }
 
                 /*-------------------- [ RUN ] ------------------*/
@@ -150,7 +154,8 @@ namespace Inlämning3
                 // This shows when/if you die.
                 if (Program.player1.health <= 0)
                 {
-                    TextAndStory.Print($"As the {n} stands tall and comes down to strike. You have been slayn by the mighty {n}!\n");
+                    Console.Clear();
+                    TextAndStory.Print($"You have been slayn by the mighty {n}!\n");
                     Console.ForegroundColor = ConsoleColor.Red;
                     TextAndStory.Print($"YOU LOSE!");
                     Console.ResetColor();
