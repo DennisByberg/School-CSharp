@@ -13,13 +13,13 @@ namespace Inlämning3
 
         static void Main(string[] args)
         {
-            //TextAndStory.GameName();
+            TextAndStory.GameName();
 
-            //TextAndStory.IntroText();
+            TextAndStory.IntroText();
 
-            //Battles.FirstBattle();
+            Battles.FirstBattle();
 
-            while (mainLoop)
+            while (mainLoop && player1.mods < 10)
             {
                 Shop.LoadShop(player1);
                 Battles.RandomBattle();

@@ -36,7 +36,6 @@ namespace Inlämning3
             }
         }
 
-
         public static void Combat(bool random, string name, int power, int health)
         {
             string n = "";
@@ -58,13 +57,15 @@ namespace Inlämning3
 
             while (h > 0)
             {
+                // Enemy menu.
                 Console.Clear();
                 Console.WriteLine($"+=======================+");
                 Console.WriteLine($"|       {n}       |");
                 Console.WriteLine($"+=======================+");
                 Console.WriteLine($"  lvl: {p}  |  health: {h} ");
                 Console.WriteLine($"+-----------------------+");
-                // This is the menu of options you have in the battle.
+
+                // Menu of options you have in the battle.
                 Console.WriteLine("\n+========================+");
                 Console.WriteLine("| (A)ttack               |");
                 Console.WriteLine("| (H)eal                 |");
@@ -156,7 +157,7 @@ namespace Inlämning3
                 Console.ReadKey();
             }
 
-            // This shows how much coins and exp the enemy is going to drop.
+            // How much coins and exp the enemy is going to drop after the battle ends.
             int c = Program.player1.GetCoins();
             int x = Program.player1.GetXP();
             Console.Clear();

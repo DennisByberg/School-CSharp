@@ -14,7 +14,7 @@ namespace Inlämning3
             Console.WriteLine("|                               |");
             Console.WriteLine("|                               |");
             Console.WriteLine("|         DUNGEON ESCAPE        |");
-            Console.WriteLine("|             v 1.5             |");
+            Console.WriteLine("|                2              |");
             Console.WriteLine("|                               |");
             Console.WriteLine("|                               |");
             Console.WriteLine("+-------------------------------+");
@@ -25,35 +25,22 @@ namespace Inlämning3
             // Username Check.
             Console.Write("Enter your username: ");
             Program.player1.name = Console.ReadLine();
-
-            // Age Check.
-            Console.Write("Enter your age: ");
-            int age = Convert.ToInt32(Console.ReadLine());
-
-            if (age < 18)
-            {
-                Console.Clear();
-                TextAndStory.Print("Sorry, you are to young to play this game, come back when you are 18. ");
-                System.Threading.Thread.Sleep(500);
-                System.Environment.Exit(0);
-            }
-
             Console.Clear();
 
-            // Story Text (#1)
-            Print("Welcome to Dungeon Escape 1.5!");
+            // Story Text
+            Print("Welcome to Dungeon Escape 2!");
             System.Threading.Thread.Sleep(500);
             Print("Your goal is to get to the 10th dungeon where there is a door to set you free.\nTo get there you need to fight a coulpe of monsters so you can advance.");
-            // If you write a blanc space in your name input, this will print that you dont even remember your name. else it will print your name.
+
             if (Program.player1.name == "")
             {
                 System.Threading.Thread.Sleep(500);
-                TextAndStory.Print("\nYou cant even remember your own name.");
+                Print($"\nAlright... Lets get started...");
             }
             else
             {
                 System.Threading.Thread.Sleep(500);
-                Print($"\nAlright... Lets get started {Program.player1.name}...");
+                Print($"\nAlright {Program.player1.name}... Lets get started...");
             }
 
             PressEnter();
@@ -67,7 +54,6 @@ namespace Inlämning3
             Console.ReadKey();
         }
 
-        // This is a cool print method! TextAndStory.Print("Your Text") to use.
         public static void Print(string text, int speed = 30)
         {
             foreach (char c in text)
@@ -98,12 +84,13 @@ namespace Inlämning3
         public static void VictoryScreen()
         {
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
             Print("You succesfully escaped the dungeon, you are free!!!!");
             Print("\nCongrats, you won the game!");
-            Console.WriteLine("Press <ENTER> to quit the game");
+            Console.ResetColor();
+            Console.WriteLine("\nPress <ENTER> to quit the game");
             Console.ReadKey();
             System.Environment.Exit(0);
         }
-
     }
 }

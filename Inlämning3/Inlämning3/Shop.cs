@@ -30,7 +30,7 @@ namespace Inlämning3
 
             while (true)
             {
-                potionP = 20 + 10 * p.mods;
+                potionP = 30 + 10 * p.mods;
                 armorP = 100 * (p.armor+1);
                 weaponP = 100 * (p.weapon);
                 difP = 200 + 100 * p.mods;
