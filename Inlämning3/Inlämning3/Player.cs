@@ -19,7 +19,7 @@ namespace Inlämning3
         public int armor { get; set; } = 0;
         public int potion { get; set; } = 5;
         public int weapon { get; set; } = 1;
-        public int mods { get; set; } = 1;
+        public int mods { get; set; } = 0;
 
         public int GetHealth()
         {
