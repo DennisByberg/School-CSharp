@@ -79,7 +79,8 @@ namespace Inlämning3
                 /*------------------- [ ATTACK ] -----------------*/
                 if (input.ToLower() == "a" || input.ToLower() == "attack")
                 {
-                    TextAndStory.Print($"You swing your sword...");
+                    TextAndStory.BattlePrint($"You swing your sword...");
+                    System.Threading.Thread.Sleep(300);
                     int damage = p - Program.player1.armor;
 
                     if (damage < 0)
@@ -89,14 +90,17 @@ namespace Inlämning3
 
                     int attack = rnd.Next(0, Program.player1.weapon) + rnd.Next(1, 4);
 
-                    TextAndStory.Print($"You deal {attack} hp.");
-                    System.Threading.Thread.Sleep(800);
-                    TextAndStory.Print($"{n} Strikes back and deal {damage} hp.");
-                    System.Threading.Thread.Sleep(800);
+                    Console.ForegroundColor = ConsoleColor.DarkGreen;
+                    TextAndStory.BattlePrint($"\nYou deal {attack} hp.");
+                    Console.ResetColor();
+                    System.Threading.Thread.Sleep(600);
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    TextAndStory.BattlePrint($"{n} Strikes back and deal {damage} hp.");
+                    Console.ResetColor();
+                    System.Threading.Thread.Sleep(1100);
                     Program.player1.health -= damage;
                     h -= attack;
-
-                    TextAndStory.PressEnter();
+                    continue;
                 }
 
                 /*-------------------- [ RUN ] ------------------*/

@@ -78,7 +78,7 @@ namespace Inlämning3
             Console.WriteLine();
         }
 
-        public static void BattlePrint(string text, int speed = 10)
+        public static void BattlePrint(string text, int speed = 15)
         {
             foreach (char c in text)
             {
