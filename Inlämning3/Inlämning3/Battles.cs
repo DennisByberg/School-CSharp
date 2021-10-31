@@ -79,7 +79,7 @@ namespace Inlämning3
                 /*------------------- [ ATTACK ] -----------------*/
                 if (input.ToLower() == "a" || input.ToLower() == "attack")
                 {
-                    TextAndStory.BattlePrint($"You swing your sword...");
+                    TextAndStory.BattlePrint($"\nYou swing your sword...");
                     System.Threading.Thread.Sleep(300);
                     int damage = p - Program.player1.armor;
 
@@ -110,45 +110,36 @@ namespace Inlämning3
                 /*-------------------- [ RUN ] ------------------*/
                 else if (input.ToLower() == "r" || input.ToLower() == "run")
                 {
-                    if (rnd.Next(0, 2) == 0)
-                    {
-                        Console.WriteLine($"As you sprint away from the {n} its strike catches you in the back, sending you to the ground.");
-                        int damage = p - Program.player1.armor;
-                        if (damage < 0)
-                        {
-                            damage = 0;
-                        }
-                        Console.WriteLine($"You lose {damage} health and are unable to escape this time.");
-                        Program.player1.health -= damage;
-                    }
-                    else
-                    {
-                        Console.WriteLine($"You succesfully ran away from {n}...");
-                        Console.ReadKey();
-                        Shop.LoadShop(Program.player1);
-                    }
+                    TextAndStory.BattlePrint($"\nYou succesfully ran away from {n}...");
+                    System.Threading.Thread.Sleep(1200);
+                    Shop.LoadShop(Program.player1);
                 }
 
                 /*-------------------- [ HEAL ] ------------------*/
                 else if (input.ToLower() == "h" || input.ToLower() == "heal")
                 {
+                    Console.ForegroundColor = ConsoleColor.DarkCyan;
                     if (Program.player1.potion == 0)
                     {
-                        Console.WriteLine("You have no potions left.");
+                        TextAndStory.BattlePrint("\nYou have no potions left!");
+                        System.Threading.Thread.Sleep(1100);
                         int damage = p - Program.player1.armor;
                         {
                             damage = 0;
                         }
-                        Console.WriteLine($"The {n} strikes you with a mighty blow and you lose {damage} health");
                     }
                     else
                     {
-                        Console.WriteLine("You reach into your bag and drink the potion.");
+                        TextAndStory.BattlePrint("\nYou reach into your bag and drink the potion.");
                         int potionV = 5;
-                        Console.WriteLine($"You gain {potionV} health.");
+                        System.Threading.Thread.Sleep(300);
+                        TextAndStory.BattlePrint($"You gain {potionV} health.");
+                        System.Threading.Thread.Sleep(1100);
                         Program.player1.health += potionV;
                         Program.player1.potion--;
                     }
+                    Console.ResetColor();
+                    continue;
                 }
 
                 // This shows when/if you die.

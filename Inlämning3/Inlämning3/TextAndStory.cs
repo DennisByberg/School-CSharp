@@ -14,7 +14,7 @@ namespace Inlämning3
             Console.WriteLine("|                               |");
             Console.WriteLine("|                               |");
             Console.WriteLine("|         DUNGEON ESCAPE        |");
-            Console.WriteLine("|             v 1.4             |");
+            Console.WriteLine("|             v 1.5             |");
             Console.WriteLine("|                               |");
             Console.WriteLine("|                               |");
             Console.WriteLine("+-------------------------------+");
@@ -41,7 +41,7 @@ namespace Inlämning3
             Console.Clear();
 
             // Story Text (#1)
-            Print("Welcome to Dungeon Escape 1.4!");
+            Print("Welcome to Dungeon Escape 1.5!");
             System.Threading.Thread.Sleep(500);
             Print("Your goal is to get to the 10th dungeon where there is a door to set you free.\nTo get there you need to fight a coulpe of monsters so you can advance.");
             // If you write a blanc space in your name input, this will print that you dont even remember your name. else it will print your name.
