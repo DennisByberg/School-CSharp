@@ -7,7 +7,6 @@ namespace Inlämning2byDB.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) //!
         {
-
         }
             
         public DbSet<Person> Persons { get; set; }
