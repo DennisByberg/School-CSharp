@@ -49,12 +49,11 @@ namespace Inlämning2byDB.Services
             return updatedPerson.Entity;
         }
 
-        // Hämta childrens
+        // Get Childrens
         public List<Person> GetChildrens(int parentId)
         {
             var children = _db.Persons.Where(person => person.FatherId == parentId || person.MotherId == parentId);
             return children.ToList();
         }
-
     }
 }
