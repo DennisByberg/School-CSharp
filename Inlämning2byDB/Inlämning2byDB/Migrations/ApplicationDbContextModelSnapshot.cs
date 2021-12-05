@@ -3,7 +3,6 @@ using Inlämning2byDB.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Inlämning2byDB.Migrations
 {
@@ -25,7 +24,7 @@ namespace Inlämning2byDB.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("FatherId")
+                    b.Property<int?>("FatherId")
                         .HasColumnType("int");
 
                     b.Property<string>("FirstName")
@@ -34,7 +33,7 @@ namespace Inlämning2byDB.Migrations
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("MotherId")
+                    b.Property<int?>("MotherId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");

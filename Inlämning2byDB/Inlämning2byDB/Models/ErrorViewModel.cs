@@ -1,5 +1,3 @@
-using System;
-
 namespace Inlämning2byDB.Models
 {
     public class ErrorViewModel

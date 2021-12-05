@@ -46,8 +46,9 @@
                                 <td width="12%">@person.FatherId</td>
                                 <td width="12%">@person.MotherId</td>
                                 <td>
-                                @Html.ActionLink("Edit", "Edit", new { id=person.Id }) |
-                                @Html.ActionLink("Delete", "Delete", new { id=person.Id })
+                                    @Html.ActionLink("View", "View", new { id = person.Id }) |
+                                    @Html.ActionLink("Edit", "Edit", new { id = person.Id }) |
+                                    @Html.ActionLink("Delete", "Delete", new { id = person.Id })
                                 </td>
                             </tr>
                 }
