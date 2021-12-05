@@ -73,5 +73,34 @@ namespace Inlämning2byDB.Controllers
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        // Get-Edit
+        public IActionResult Edit(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+            var obj = _db.Persons.Find(id);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+            return View(obj);
+        }
+
+        // POST-Edit
+        [HttpPost]
+        [ValidateAntiForgeryToken] // For Safety. 
+        public IActionResult Edit(Person obj)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Persons.Update(obj);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(obj);
+        }
     }
 }
