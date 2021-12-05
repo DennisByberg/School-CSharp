@@ -9,7 +9,6 @@ namespace Inlämning2byDB.Data
         {
             context.Database.EnsureCreated();
 
-            // Look for any persons.
             if (context.Persons.Any())
             {
                 return;
@@ -17,20 +16,20 @@ namespace Inlämning2byDB.Data
 
             var persons = new Person[]
             {
-            // 3rd Gen.
+            // Generation X
             new Person{FirstName="Abe",LastName="Simpson",FatherId=null, MotherId=null}, // [id=1]
             new Person{FirstName="Mona",LastName="Simpson",FatherId=null, MotherId=null}, // [id=2]
             new Person{FirstName="Clancy",LastName="Bouvier",FatherId=null, MotherId=null}, // [id=3]
             new Person{FirstName="Jacqueline",LastName="Bouvier",FatherId=null, MotherId=null}, // [id=4]
 
-            // 2nd Gen.
+            // Generation Y.
             new Person{FirstName="Herb",LastName="Simpson",FatherId=1, MotherId=2}, // [id=5]
             new Person{FirstName="Homer",LastName="Simpson",FatherId=1, MotherId=2}, // [id=6]
             new Person{FirstName="Marge",LastName="Bouvier",FatherId=3, MotherId=4}, // [id=7]
             new Person{FirstName="Patty",LastName="Bouvier",FatherId=3, MotherId=4}, // [id=8]
             new Person{FirstName="Selma",LastName="Bouvier",FatherId=3, MotherId=4}, // [id=9]
 
-            // 3rd Gen
+            // Generation Z.
             new Person{FirstName="Bart",LastName="Simpson",FatherId=6, MotherId=7}, // [id=10]
             new Person{FirstName="Lisa",LastName="Simpson",FatherId=6, MotherId=7}, // [id=11]
             new Person{FirstName="Maggie",LastName="Simpson",FatherId=6, MotherId=7}, // [id=12]

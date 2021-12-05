@@ -1,16 +1,12 @@
-﻿using Inlämning2byDB.Data;
-using Inlämning2byDB.Models;
+﻿using Inlämning2byDB.Models;
 using Inlämning2byDB.Services;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
 
 namespace Inlämning2byDB.Controllers
 {
     public class PersonController : Controller
     {
-        // Dependency Injection
         private readonly PersonService _persons;
-
         public PersonController(PersonService personService)
         {
             _persons = personService;
@@ -30,7 +26,7 @@ namespace Inlämning2byDB.Controllers
 
         // POST-Create
         [HttpPost]
-        [ValidateAntiForgeryToken] // For Safety. 
+        [ValidateAntiForgeryToken]
         public IActionResult Create(Person obj)
         {
             if (ModelState.IsValid)
@@ -40,7 +36,6 @@ namespace Inlämning2byDB.Controllers
             }
             return View(obj);
         }
-
 
         // Get-Delete
         public IActionResult Delete(int id)
@@ -56,7 +51,7 @@ namespace Inlämning2byDB.Controllers
 
         // POST-Delete
         [HttpPost]
-        [ValidateAntiForgeryToken] // For Safety. 
+        [ValidateAntiForgeryToken]
         public IActionResult DeletePost(int id)
         {
             var obj = _persons.GetPerson(id);
@@ -82,7 +77,7 @@ namespace Inlämning2byDB.Controllers
 
         // POST-Edit
         [HttpPost]
-        [ValidateAntiForgeryToken] // For Safety. 
+        [ValidateAntiForgeryToken]
         public IActionResult Edit(Person obj)
         {
             if (ModelState.IsValid)
