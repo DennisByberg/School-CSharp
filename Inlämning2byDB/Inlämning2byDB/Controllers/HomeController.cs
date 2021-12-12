@@ -18,7 +18,6 @@ namespace Inlämning2byDB.Controllers
         {
             return View();
         }
-
         public IActionResult Privacy()
         {
             return View();
