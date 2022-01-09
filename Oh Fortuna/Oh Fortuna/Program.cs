@@ -54,6 +54,8 @@ namespace Oh_Fortuna
                 {
                     Console.WriteLine("You must bet atleast 50 Pix");
                     userBet = 0;
+                    Thread.Sleep(500);
+                    Console.Clear();
                     continue;
                 }
 
