@@ -1,4 +1,6 @@
-﻿namespace Business
+﻿using System;
+
+namespace Business
 {
     public class SerialPortParser
     {
