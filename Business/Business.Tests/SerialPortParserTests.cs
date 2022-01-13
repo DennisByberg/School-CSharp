@@ -6,13 +6,10 @@ namespace Business.Tests
     public class SerialPortParserTests
     {
         [Test]
-        public void ParsePort_COM1_Returns1()
+        public void ParsePort_COM1_Returns()
         {
             int result = SerialPortParser.ParsePort("COM1");
             Assert.That(result, Is.EqualTo(1));
-
-            //older style of Asserts in NUnit
-            //Assert.AreEqual(1, result);
         }
     }
 }
