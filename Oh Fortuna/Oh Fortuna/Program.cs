@@ -138,7 +138,7 @@ namespace Oh_Fortuna
                     if (userPix < 50)
                     {
                         Console.WriteLine("\nYou dont have enought Pix left to play!");
-                        Console.WriteLine($"Thanks for playing my game {userName} and have a nice day!");
+                        Console.WriteLine($"Thanks for playing my game {userName} and have a nice day!!");
                         Thread.Sleep(2000);
                     }
                     break;
