@@ -1,6 +1,6 @@
 ﻿namespace InlämningsuppgiftTDD1DennisByberg
 {
-    public class Class1
+    public class FacadeClass
     {
 
     }
