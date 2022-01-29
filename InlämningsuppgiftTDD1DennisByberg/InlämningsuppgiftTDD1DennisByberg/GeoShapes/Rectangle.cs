@@ -2,12 +2,12 @@
 
 namespace InlämningsuppgiftTDD1DennisByberg
 {
-    public class Rectangles : IShapeModel
+    public class Rectangle : IShapeModel
     {
-        public float Width { get; set; }
-        public float Height { get; set; }
+        public float Width { get; }
+        public float Height { get; }
 
-        public Rectangles (float width, float height)
+        public Rectangle (float width, float height)
         {
             Width = width;
             Height = height;

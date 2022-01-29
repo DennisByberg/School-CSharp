@@ -2,27 +2,23 @@
 
 namespace InlämningsuppgiftTDD1DennisByberg
 {
-    //TODO: Ska innehålla: Rättvinkliga, Likbenta och Liksidiga?
-    public class Triangles : IShapeModel
+    public class Triangle : IShapeModel
     {
         public float SideA { get; }
         public float SideB { get; }
         public float SideC { get; }
-        public float Widht { get; }
-        public float Height { get; }
 
-        public Triangles(float sideA, float sideB, float sideC, float widht, float height)
+        public Triangle(float sideA, float sideB, float sideC)
         {
             SideA = sideA;
             SideB = sideB;
             SideC = sideC;
-            Widht = widht;
-            Height = height;
         }
 
         public float Area()
         {
-            var area = Widht * Height / 2;
+            var s = (SideA + SideB + SideC) / 2;
+            var area = (float)Math.Sqrt( s * ((s - SideA) * (s - SideB) * (s - SideC)));
             return area;
         }
 

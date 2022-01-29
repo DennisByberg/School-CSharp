@@ -9,23 +9,23 @@
 
 Uppgiften är alltså att skapa en enkel Facadeklass som ska kunna räkna ut arean och omkretsen.
 [✓] Cirklar
-[ ] Trianglar (Rättvinkliga, Likbenta, Liksidiga)
+[✓] Trianglar (Rättvinkliga, Likbenta, Liksidiga)
 [✓] Kvadrater
 [✓] Rektanglar
 
-[ ] Var och en av dessa typer ska vara en klass för sig. Självklart ska dessa testas för att bekräfta att
+[✓] Var och en av dessa typer ska vara en klass för sig. Självklart ska dessa testas för att bekräfta att
 beräkningarna stämmer.
 
-[ ] Man ska även kunna summera flera objekts omkrets. Genom att skicka in en array, exempelvis.
+[✓] Man ska även kunna summera flera objekts omkrets. Genom att skicka in en array, exempelvis.
 Där GeometricThing är en abstrakt klass eller interface som alla de geometriska typerna
 ärver eller implementerar, och GeometricCalculator är din klass som ska göra beräkningarna.
 
-[ ] Klassen GeometricCalculator ska ha följande metoder:
+[✓] Klassen GeometricCalculator ska ha följande metoder:
 GetArea(GeometricThing thing) – Räknar ut arean
 GetPerimeter(GeometricThing thing) – räknar ut omkretsen av en figur
 GetPerimeter(GeometricThing[] thing) – Räknar ut sammanlagd omkrets av flera figurer
 
-[ ] Alla värden och beräkningar ska ske med float och metoderna ska returnera float.
+[✓] Alla värden och beräkningar ska ske med float och metoderna ska returnera float.
 Alla beräkningar kommer att vara i metriska enheter.
 Det behövs inget användargränssnitt då all verifiering sker i unit-testerna.
 
@@ -35,7 +35,7 @@ Betygskriterier godkänt
 ──────────────────────────────────────────────────
 [ ] All kod ska vara kommenterad med XML kommentarer
 [ ] Alla publika metoder ska testas med minst ett test
-[ ] Interface/abstrakta klasser används för de olika typerna
+[✓] Interface/abstrakta klasser används för de olika typerna
 
 Betygskriterier väl godkänt
 ───────────────────────────────────────────────────

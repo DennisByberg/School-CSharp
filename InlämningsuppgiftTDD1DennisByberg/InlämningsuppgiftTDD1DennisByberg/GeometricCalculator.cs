@@ -6,23 +6,17 @@ namespace InlämningsuppgiftTDD1DennisByberg
     {
         public float GetArea(IShapeModel shape)
         {
-            // TODO: KOD HÄR!
-            // Ska räkna ut arean.
-            throw new NotImplementedException();
+            return shape.Area();
         }
 
         public float GetPerimeter(IShapeModel shape)
         {
-            // TODO: KOD HÄR!
-            // Ska räkna ut omkretsen.
-            throw new NotImplementedException();
+            return shape.Perimeter();
         }
 
         public float GetPerimeter(IShapeModel[] shapes)
         {
-            // TODO: KOD HÄR!
-            // ska räkna ut sammanlagd omkrets av flera figurer
-            throw new NotImplementedException();
+            return shapes.Sum(shape => GetPerimeter(shape));
         }
     }
 }

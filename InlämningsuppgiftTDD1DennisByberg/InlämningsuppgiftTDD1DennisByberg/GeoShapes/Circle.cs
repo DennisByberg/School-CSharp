@@ -3,11 +3,11 @@ using System;
 
 namespace InlämningsuppgiftTDD1DennisByberg
 {
-    public class Circles : IShapeModel
+    public class Circle : IShapeModel
     {
         public float Radius { get; }
 
-        public Circles(float radius)
+        public Circle(float radius)
         {
             Radius = radius;
         }

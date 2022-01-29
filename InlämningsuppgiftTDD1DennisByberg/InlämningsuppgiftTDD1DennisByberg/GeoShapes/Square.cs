@@ -2,11 +2,11 @@
 
 namespace InlämningsuppgiftTDD1DennisByberg
 {
-    public class Squares : IShapeModel
+    public class Square : IShapeModel
     {
         public float Side { get; }
 
-        public Squares (float side)
+        public Square (float side)
         {
             Side = side;
         }
