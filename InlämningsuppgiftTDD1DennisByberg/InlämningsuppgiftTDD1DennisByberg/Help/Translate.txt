@@ -6,12 +6,3 @@
  ● Area -> Area
  ● Radie -> Radius
  ● Omkrets -> Perimeter
- ● 
- ●
- ●
- ●
- ●
- ●
- ●
- ●
- ●
