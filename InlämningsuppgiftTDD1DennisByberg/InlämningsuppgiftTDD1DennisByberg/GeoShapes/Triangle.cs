@@ -22,10 +22,6 @@ namespace InlämningsuppgiftTDD1DennisByberg
             return area;
         }
 
-        public float Perimeter()
-        {
-            var perimeter = SideA + SideB + SideC;
-            return perimeter;
-        }
+        public float Perimeter() => SideA + SideB + SideC;
     }
 }

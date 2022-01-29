@@ -5,15 +5,13 @@ namespace InlämningsuppgiftTDD1DennisByberg.Tests
 {
     public class PerimeterTests
     {
-        private GeometricCalculator _calculator = new GeometricCalculator();
-
         [Theory]
         [InlineData(2, 8)]
         [InlineData(3.5, 14)]
         public void CalculateSquarePerimeter(float side, float expected)
         {
             var square = new Square(side);
-            var result = _calculator.GetPerimeter(square);
+            var result = GeometricCalculator.GetPerimeter(square);
             Assert.Equal(expected, result);
         }
 
@@ -23,7 +21,7 @@ namespace InlämningsuppgiftTDD1DennisByberg.Tests
         public void CalculateRectanglePerimeter(float width, float height, float expected)
         {
             var rectangle = new Rectangle(width, height);
-            var result = _calculator.GetPerimeter(rectangle);
+            var result = GeometricCalculator.GetPerimeter(rectangle);
             Assert.Equal(expected, result);
         }
 
@@ -33,7 +31,7 @@ namespace InlämningsuppgiftTDD1DennisByberg.Tests
         public void CalculateCirclePerimeter(float radius, float expected)
         {
             var circle = new Circle(radius);
-            var result = _calculator.GetPerimeter(circle);
+            var result = GeometricCalculator.GetPerimeter(circle);
             Assert.Equal(expected, result);
         }
 
@@ -43,7 +41,7 @@ namespace InlämningsuppgiftTDD1DennisByberg.Tests
         public void CalculateTrianglePerimeter(float sideA, float sideB, float sideC, float expected)
         {
             var triangle = new Triangle(sideA, sideB, sideC);
-            var result = _calculator.GetPerimeter(triangle);
+            var result = GeometricCalculator.GetPerimeter(triangle);
             Assert.Equal(expected, result);
         }
 
@@ -58,14 +56,13 @@ namespace InlämningsuppgiftTDD1DennisByberg.Tests
                 new Rectangle(10,20)
             };
 
-            var result = _calculator.GetPerimeter(geoThings);
+            var result = GeometricCalculator.GetPerimeter(geoThings);
             float expected = 0;
 
             foreach (var geoThing in geoThings)
             {
-                expected += _calculator.GetPerimeter(geoThing);
+                expected += GeometricCalculator.GetPerimeter(geoThing);
             }
-
             Assert.Equal(expected, result);
         }
     }

@@ -6,15 +6,13 @@ namespace InlämningsuppgiftTDD1DennisByberg.Tests
 {
     public class AreaTests
     {
-        private GeometricCalculator _calculator = new GeometricCalculator();
-
         [Theory]
         [InlineData(10, 100)]
         [InlineData(5.2f, 27.039997f)]
         public void CalculateSquareArea(float side, float expected)
         {
             var square = new Square(side);
-            var result = _calculator.GetArea(square);
+            var result = GeometricCalculator.GetArea(square);
             Assert.Equal(expected, result);
         }
 
@@ -24,7 +22,7 @@ namespace InlämningsuppgiftTDD1DennisByberg.Tests
         public void CalculateRectangleArea(float width, float height, float expected)
         {
             var rectangle = new Rectangle(width, height);
-            var result = _calculator.GetArea(rectangle);
+            var result = GeometricCalculator.GetArea(rectangle);
             Assert.Equal(expected, result);
         }
 
@@ -34,7 +32,7 @@ namespace InlämningsuppgiftTDD1DennisByberg.Tests
         public void CalculateCirleArea(float radius, float expected)
         {
             var circle = new Circle(radius);
-            var result = _calculator.GetArea(circle);
+            var result = GeometricCalculator.GetArea(circle);
             Assert.Equal(expected, result);
         }
 
@@ -45,7 +43,7 @@ namespace InlämningsuppgiftTDD1DennisByberg.Tests
         public void CalculateTriangleArea(float sideA, float sideB, float sideC, float expected)
         {
             var triangle = new Triangle(sideA, sideB, sideC);
-            var result = _calculator.GetArea(triangle);
+            var result = GeometricCalculator.GetArea(triangle);
             Assert.Equal(expected, result);
         }
     }
