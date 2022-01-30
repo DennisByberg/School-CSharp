@@ -37,9 +37,9 @@ namespace InlämningsuppgiftTDD1DennisByberg.Tests
         }
 
         [Theory]
-        [InlineData(2, 2, 2, 1.7320508)] // Likbent.
-        [InlineData(5, 5, 3, 7.154544)] // Liksidig.
-        [InlineData(5, 10, 11.8, 24.745222)] // Rätvinklig.
+        [InlineData(2, 2, 2, 1.7320508)] // Likbent Triangel.
+        [InlineData(5, 5, 3, 7.154544)] // Liksidig Triangel.
+        [InlineData(5, 10, 11.8, 24.745222)] // Rätvinklig Triangel.
         public void CalculateTriangleArea(float sideA, float sideB, float sideC, float expected)
         {
             var triangle = new Triangle(sideA, sideB, sideC);
