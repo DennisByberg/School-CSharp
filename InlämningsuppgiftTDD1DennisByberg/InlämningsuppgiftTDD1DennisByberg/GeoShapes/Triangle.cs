@@ -8,6 +8,10 @@
         public float SideB { get; }
         public float SideC { get; }
 
+        /// <summary>Initializes a new instance of the <see cref="Triangle" /> class.</summary>
+        /// <param name="sideA">The side a.</param>
+        /// <param name="sideB">The side b.</param>
+        /// <param name="sideC">The side c.</param>
         public Triangle(float sideA, float sideB, float sideC)
         {
             SideA = sideA;

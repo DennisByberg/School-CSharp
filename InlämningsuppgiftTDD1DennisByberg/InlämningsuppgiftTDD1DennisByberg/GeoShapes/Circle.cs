@@ -6,6 +6,8 @@
     {
         public float Radius { get; }
 
+        /// <summary>Initializes a new instance of the <see cref="Circle" /> class.</summary>
+        /// <param name="radius">The radius.</param>
         public Circle(float radius) => Radius = radius;
 
         public float Area() => (float)Math.PI * Radius * Radius;

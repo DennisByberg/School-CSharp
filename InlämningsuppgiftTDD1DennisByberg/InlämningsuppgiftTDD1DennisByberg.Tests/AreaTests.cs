@@ -1,5 +1,3 @@
-using InlämningsuppgiftTDD1DennisByberg.Shapes;
-using System;
 using Xunit;
 
 namespace InlämningsuppgiftTDD1DennisByberg.Tests
@@ -9,6 +7,7 @@ namespace InlämningsuppgiftTDD1DennisByberg.Tests
         [Theory]
         [InlineData(10, 100)]
         [InlineData(5.2f, 27.039997f)]
+        [InlineData(-5, 25)]
         public void CalculateSquareArea(float side, float expected)
         {
             var square = new Square(side);
@@ -18,7 +17,8 @@ namespace InlämningsuppgiftTDD1DennisByberg.Tests
 
         [Theory]
         [InlineData(10, 20, 200)]
-        [InlineData(5.2, 10.2, 53.039997)]
+        [InlineData(5.2f, 10.2f, 53.039997f)]
+        [InlineData(-5, -2, 10)]
         public void CalculateRectangleArea(float width, float height, float expected)
         {
             var rectangle = new Rectangle(width, height);
@@ -27,8 +27,9 @@ namespace InlämningsuppgiftTDD1DennisByberg.Tests
         }
 
         [Theory]
-        [InlineData(10, 314.15927)]
-        [InlineData(5.2, 84.948654)]
+        [InlineData(10.0f, 314.15927f)]
+        [InlineData(5.2f, 84.948654f)]
+        [InlineData(-10, 314.15927f)]
         public void CalculateCirleArea(float radius, float expected)
         {
             var circle = new Circle(radius);
@@ -37,9 +38,9 @@ namespace InlämningsuppgiftTDD1DennisByberg.Tests
         }
 
         [Theory]
-        [InlineData(2, 2, 2, 1.7320508)] // Likbent Triangel.
-        [InlineData(5, 5, 3, 7.154544)] // Liksidig Triangel.
-        [InlineData(5, 10, 11.8, 24.745222)] // Rätvinklig Triangel.
+        [InlineData(2, 2, 2, 1.7320508f)] // Likbent Triangel.
+        [InlineData(5, 5, 3, 7.154544f)] // Liksidig Triangel.
+        [InlineData(5, 10, 11.8f, 24.745222f)] // Rätvinklig Triangel.
         public void CalculateTriangleArea(float sideA, float sideB, float sideC, float expected)
         {
             var triangle = new Triangle(sideA, sideB, sideC);
