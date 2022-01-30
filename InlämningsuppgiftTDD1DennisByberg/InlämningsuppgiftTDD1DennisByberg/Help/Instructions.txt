@@ -35,7 +35,7 @@ Det behövs inget användargränssnitt då all verifiering sker i unit-testerna.
 │             Betygskriterier godkänt              │
 │                                                  │
 └──────────────────────────────────────────────────┘
-[ ] All kod ska vara kommenterad med XML kommentarer
+[✓] All kod ska vara kommenterad med XML kommentarer
 [✓] Alla publika metoder ska testas med minst ett test
 [✓] Interface/abstrakta klasser används för de olika typerna
 

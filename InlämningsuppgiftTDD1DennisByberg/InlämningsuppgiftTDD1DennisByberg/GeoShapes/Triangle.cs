@@ -1,5 +1,4 @@
 ﻿namespace InlämningsuppgiftTDD1DennisByberg
-
 {
     using InlämningsuppgiftTDD1DennisByberg.Shapes;
     public class Triangle : IShapeModel

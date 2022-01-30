@@ -1,7 +1,6 @@
-﻿using InlämningsuppgiftTDD1DennisByberg.Shapes;
-
-namespace InlämningsuppgiftTDD1DennisByberg
+﻿namespace InlämningsuppgiftTDD1DennisByberg
 {
+    using InlämningsuppgiftTDD1DennisByberg.Shapes;
     public static class GeometricCalculator
     {
         /// <summary>

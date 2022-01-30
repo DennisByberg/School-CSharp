@@ -1,7 +1,6 @@
-using Xunit;
-
 namespace InlämningsuppgiftTDD1DennisByberg.Tests
 {
+    using Xunit;
     public class AreaTests
     {
         [Theory]
@@ -38,9 +37,9 @@ namespace InlämningsuppgiftTDD1DennisByberg.Tests
         }
 
         [Theory]
-        [InlineData(2, 2, 2, 1.7320508f)] // Likbent Triangel.
-        [InlineData(5, 5, 3, 7.154544f)] // Liksidig Triangel.
-        [InlineData(5, 10, 11.8f, 24.745222f)] // Rätvinklig Triangel.
+        [InlineData(2, 2, 2, 1.7320508f)]         // Likbent Triangel.
+        [InlineData(5, 5, 3, 7.154544f)]          // Liksidig Triangel.
+        [InlineData(5, 10, 11.8f, 24.745222f)]    // Rätvinklig Triangel.
         public void CalculateTriangleArea(float sideA, float sideB, float sideC, float expected)
         {
             var triangle = new Triangle(sideA, sideB, sideC);

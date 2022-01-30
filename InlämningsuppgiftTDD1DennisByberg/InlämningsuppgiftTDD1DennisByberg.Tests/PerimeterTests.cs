@@ -1,8 +1,7 @@
-﻿using InlämningsuppgiftTDD1DennisByberg.Shapes;
-using Xunit;
-
-namespace InlämningsuppgiftTDD1DennisByberg.Tests
+﻿namespace InlämningsuppgiftTDD1DennisByberg.Tests
 {
+    using InlämningsuppgiftTDD1DennisByberg.Shapes;
+    using Xunit;
     public class PerimeterTests
     {
         [Theory]
