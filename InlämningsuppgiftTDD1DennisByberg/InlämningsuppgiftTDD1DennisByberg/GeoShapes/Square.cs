@@ -1,26 +1,12 @@
-﻿using InlämningsuppgiftTDD1DennisByberg.Shapes;
-
-namespace InlämningsuppgiftTDD1DennisByberg
+﻿namespace InlämningsuppgiftTDD1DennisByberg
 {
+    using InlämningsuppgiftTDD1DennisByberg.Shapes;
     public class Square : IShapeModel
     {
         public float Side { get; }
 
-        public Square (float side)
-        {
-            Side = side;
-        }
-
-        public float Area()
-        {
-            var area = Side * Side;
-            return area;
-        }
-
-        public float Perimeter()
-        {
-            var perimeter = Side + Side + Side + Side;
-            return perimeter;
-        }
+        public Square (float side) => Side = side;
+        public float Area() => Side * Side;
+        public float Perimeter() => Side + Side + Side + Side;
     }
 }

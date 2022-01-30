@@ -1,7 +1,7 @@
-﻿using InlämningsuppgiftTDD1DennisByberg.Shapes;
+﻿namespace InlämningsuppgiftTDD1DennisByberg
 
-namespace InlämningsuppgiftTDD1DennisByberg
 {
+    using InlämningsuppgiftTDD1DennisByberg.Shapes;
     public class Triangle : IShapeModel
     {
         public float SideA { get; }

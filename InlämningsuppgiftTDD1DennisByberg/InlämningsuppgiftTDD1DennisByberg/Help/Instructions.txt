@@ -30,14 +30,19 @@ Alla beräkningar kommer att vara i metriska enheter.
 Det behövs inget användargränssnitt då all verifiering sker i unit-testerna.
 
 
-
-Betygskriterier godkänt
-──────────────────────────────────────────────────
+┌──────────────────────────────────────────────────┐
+│                                                  │
+│             Betygskriterier godkänt              │
+│                                                  │
+└──────────────────────────────────────────────────┘
 [ ] All kod ska vara kommenterad med XML kommentarer
-[ ] Alla publika metoder ska testas med minst ett test
+[✓] Alla publika metoder ska testas med minst ett test
 [✓] Interface/abstrakta klasser används för de olika typerna
 
-Betygskriterier väl godkänt
-───────────────────────────────────────────────────
-[ ] Testerna (fler tester per metod) ska vara väl genomtänkta och välskrivna
-[ ] Minimalt med varningar och inforutor i error-listan på Visual Studio, helst inga alls.
+┌──────────────────────────────────────────────────┐
+│                                                  │
+│           Betygskriterier väl godkänt            │
+│                                                  │
+└──────────────────────────────────────────────────┘
+[✓] Testerna (fler tester per metod) ska vara väl genomtänkta och välskrivna
+[✓] Minimalt med varningar och inforutor i error-listan på Visual Studio, helst inga alls.
