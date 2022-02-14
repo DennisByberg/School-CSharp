@@ -35,9 +35,9 @@ namespace Inlämning2byDB.Data
             new Person{FirstName="Maggie",LastName="Simpson",FatherId=6, MotherId=7}, // [id=12]
             new Person{FirstName="Ling",LastName="Bouvier",FatherId=null, MotherId=9} // [id=13]
             };
-            foreach (Person p in persons)
+            foreach (Person person in persons)
             {
-                context.Persons.Add(p);
+                context.Persons.Add(person);
             }
             context.SaveChanges();
         }

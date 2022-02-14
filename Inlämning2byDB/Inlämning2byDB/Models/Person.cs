@@ -21,4 +21,3 @@ namespace Inlämning2byDB.Models
         public int? FatherId { get; set; } // Pappa Id (Allows Null).
     }
 }
- 
