@@ -41,11 +41,8 @@ namespace CookieMonsterAssistantByDennisByberg.Menus
             Console.WriteLine("│                                               │");
             Console.WriteLine("└───────────────────────────────────────────────┘");
 
-            Console.WriteLine("(B)ig & Buttery Chocolate Chip Cookies"); // 1
-
-            // TODO: 2a receptet...
-
-            // TODO: 3e receptet...
+            Console.WriteLine("(B)ig & Buttery Chocolate Chip Cookies");
+            Console.WriteLine("(R)icotta Cake (Baked)");
 
             Console.WriteLine("\n(G)o Back ( alt. press <Backspace> )");
 
@@ -58,14 +55,28 @@ namespace CookieMonsterAssistantByDennisByberg.Menus
             else if (choice.Key == ConsoleKey.B)
             {
                 Console.Clear();
-                var recept1 = CSVReader.BigAndButteryChocolateChipCookiesRecipe();
+                var recept = CSVReader.BigAndButteryChocolateChipCookiesRecipe();
                 Console.Write("How many batches do you want to make?: ");
                 _ = int.TryParse(Console.ReadLine(), out int batchAmount);
-                recept1.MultipliRecpie(batchAmount);
+                recept.MultipliRecpie(batchAmount);
+                Console.Clear();
                 Console.WriteLine("┌───────────────────────────────────────────────┐");
                 Console.WriteLine("│     Big & Buttery Chocolate Chip Cookies      │");
                 Console.WriteLine("└───────────────────────────────────────────────┘");
-                recept1.Print();
+                recept.Print();
+            }
+            else if (choice.Key == ConsoleKey.R)
+            {
+                Console.Clear();
+                var recept = CSVReader.BakedRicottaCakeRecipe();
+                Console.Write("How many batches do you want to make?: ");
+                _ = int.TryParse(Console.ReadLine(), out int batchAmount);
+                recept.MultipliRecpie(batchAmount);
+                Console.Clear();
+                Console.WriteLine("┌───────────────────────────────────────────────┐");
+                Console.WriteLine("│              Baked Ricotta Cake               │");
+                Console.WriteLine("└───────────────────────────────────────────────┘");
+                recept.Print();
             }
             else
             {

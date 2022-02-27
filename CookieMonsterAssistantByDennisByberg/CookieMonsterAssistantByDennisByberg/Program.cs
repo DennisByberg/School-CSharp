@@ -6,10 +6,9 @@ namespace ProgramNS
     {
         internal static void Main()
         {
-            Console.CursorVisible = false;
-            var text = new Text();
-
-            text.HomeMenu();
+            Console.CursorVisible = false; // <~ Väldigt snyggt att slippa se cursor under programmets gång :) ...
+            var text = new Text();         // <~ Tråkig instans av Text() ... 
+            text.HomeMenu();               // <~ Startar upp projektet ...
         }
     }
 }

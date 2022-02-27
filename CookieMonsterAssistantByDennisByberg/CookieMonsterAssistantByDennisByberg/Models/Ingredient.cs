@@ -31,9 +31,12 @@ namespace CookieMonsterAssistantByDennisByberg_Ingredient
         public override string ToString()
         {
             var amount = Amount;
-            Amount = Math.Round(amount, 2);
+            Amount = Math.Round(amount, 1);
 
-            return $"{Amount} {Measure}, {Product}, {Description}";
+            if (Description == null)
+                return $"{Amount} {Measure}, {Product}";
+            else
+                return $"{Amount} {Measure}, {Product}, {Description}";
         }
 
         private void ConvertToSwedish()

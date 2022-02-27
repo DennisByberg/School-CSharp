@@ -10,11 +10,11 @@
             }
             else if (measure == "teaspoon" || measure == "teaspoons")
             {
-                return amount * 5;
+                return amount * 4.92;
             }
             else if (measure == "ounce" || measure == "ounces")
             {
-                return amount * 30;
+                return amount * 28.34;
             }
             return amount;
         }
@@ -32,6 +32,10 @@
             else if (measure == "ounce" || measure == "ounces")
             {
                 return "g";
+            }
+            else if (measure == "piece" || measure == "pieces")
+            {
+                return "st";
             }
 
             return measure;
