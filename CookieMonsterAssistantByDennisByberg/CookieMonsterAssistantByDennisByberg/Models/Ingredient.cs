@@ -12,9 +12,8 @@ namespace CookieMonsterAssistantByDennisByberg_Ingredient
             Product = values[2].Trim();
 
             if (values.Length > 3)
-            {
                 Description = values[3].Trim();
-            }
+
             ConvertToSwedish();
         }
 
@@ -41,8 +40,9 @@ namespace CookieMonsterAssistantByDennisByberg_Ingredient
 
         private void ConvertToSwedish()
         {
-            Amount = SwedishConverter.ConvertToSwedishAmount(Amount, Measure);
-            Measure = SwedishConverter.ConvertToSwedishMeasure(Measure);
+            var converter = new SwedishConverter();
+            Amount = converter.ConvertToSwedishAmount(Amount, Measure);
+            Measure = converter.ConvertToSwedishMeasure(Measure);
         }
 
         // https://stackoverflow.com/questions/13903621/convert-a-text-fraction-to-a-decimal

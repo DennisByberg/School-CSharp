@@ -40,9 +40,7 @@ namespace CookieMonsterAssistantByDennisByberg_Recipe
         public void MultipliRecpie(int multiplier)
         {
             foreach (var ingredient in Ingredients)
-            {
                 ingredient.Multiply(multiplier);
-            }
         }
     }
 }
