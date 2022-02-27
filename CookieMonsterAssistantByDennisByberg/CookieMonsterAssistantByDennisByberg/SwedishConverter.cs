@@ -8,6 +8,11 @@
             {
                 return amount * 2.25;
             }
+
+            else if (measure == "teaspoon" || measure == "teaspoons")
+            {
+                return amount * 5;
+            }
             return amount;
         }
 
@@ -17,6 +22,12 @@
             {
                 return "dl";
             }
+
+            else if (measure == "teaspoon" || measure == "teaspoons")
+            {
+                return "ml";
+            }
+
             return measure;
         }
     }

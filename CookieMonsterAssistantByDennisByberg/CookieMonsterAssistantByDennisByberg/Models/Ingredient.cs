@@ -30,7 +30,10 @@ internal class Ingredient
 
     public override string ToString()
     {
-        return $"{Amount}, {Measure}, {Product}, {Description}";
+        var amount = Amount;
+        Amount = Math.Round(amount,2);
+
+        return $"{Amount} {Measure}, {Product}, {Description}";
     }
 
     private void ConvertToSwedish()

@@ -1,7 +1,7 @@
 ﻿// ┌ ┐ └ ┘ ─ ┤ ├ ┘ └ │ ─ • « » ●
 namespace CookieMonsterAssistantByDennisByberg.Menus
 {
-    internal class Menu
+    internal class Text
     {
         internal void HomeMenu()
         {
@@ -42,19 +42,16 @@ namespace CookieMonsterAssistantByDennisByberg.Menus
             Console.WriteLine("│                                               │");
             Console.WriteLine("└───────────────────────────────────────────────┘");
 
-            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("(B)ig & Buttery Chocolate Chip Cookies"); // 1
-            Console.ResetColor();
 
             // TODO: 2a receptet...
 
             // TODO: 3e receptet...
 
-            Console.WriteLine("\n(G)o Back"); // 9
+            Console.WriteLine("\n(G)o Back ( alt. press <Backspace> )");
 
             var choice = Console.ReadKey();
-
-            if (choice.Key == ConsoleKey.G || choice.Key == ConsoleKey.Backspace || choice.Key == ConsoleKey.Escape)
+            if (choice.Key == ConsoleKey.G || choice.Key == ConsoleKey.Backspace)
             {
                 Console.Clear();
                 HomeMenu();

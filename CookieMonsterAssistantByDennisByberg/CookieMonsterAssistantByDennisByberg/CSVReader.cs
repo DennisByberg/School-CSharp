@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 internal class CSVReader
 {
-    internal Recept BigAndButteryChocolateChipCookiesRecipe()
+    internal Recipe BigAndButteryChocolateChipCookiesRecipe()
     {
         Console.Clear();
 
@@ -18,7 +18,7 @@ internal class CSVReader
             ingredients.Add(new Ingredient(lines[i]));
         }
 
-        var recept = new Recept();
+        var recept = new Recipe();
         recept.Text = lines.Take(startIngredients +1).ToArray();
         recept.Ingredients = ingredients.ToArray();
         recept.Directions = lines.Skip(stopIngredients).ToArray();
