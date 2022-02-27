@@ -1,12 +1,15 @@
 ﻿using CookieMonsterAssistantByDennisByberg.Menus;
 
-internal class Program
+namespace ProgramNS
 {
-    internal static void Main()
+    internal static class Program
     {
-        Console.CursorVisible = false;
-        var text = new Text();
+        internal static void Main()
+        {
+            Console.CursorVisible = false;
+            var text = new Text();
 
-        text.HomeMenu();
+            text.HomeMenu();
+        }
     }
 }

@@ -1,32 +1,26 @@
-﻿
-using CookieMonsterAssistantByDennisByberg.Menus;
+﻿using CookieMonsterAssistantByDennisByberg.Menus;
+using CookieMonsterAssistantByDennisByberg_Ingredient;
 
-namespace CookieMonsterAssistantByDennisByberg.Models
+namespace CookieMonsterAssistantByDennisByberg_Recipe
 {
     internal class Recipe
     {
-        internal string[] Text { get; set; }
-        internal Ingredient[] Ingredients { get; set; }
-        internal string[] Directions { get; set; }
+        internal string[] Text { get; set; } = null!;
+        internal Ingredient[] Ingredients { get; set; } = null!;
+        internal string[] Directions { get; set; } = null!;
 
         public void Print()
         {
             foreach (var txt in Text)
-            {
                 Console.WriteLine(txt);
-            }
 
             foreach (var ingredient in Ingredients)
-            {
                 Console.WriteLine(ingredient);
-            }
 
-            Console.WriteLine();
+            Console.WriteLine(); // <~ Ny Rad...
 
             foreach (var direction in Directions)
-            {
                 Console.WriteLine(direction);
-            }
 
             Console.WriteLine("\n(G)o Back ( alt. press <Backspace> )");
             var choice = Console.ReadKey();
@@ -36,7 +30,6 @@ namespace CookieMonsterAssistantByDennisByberg.Models
                 Console.Clear();
                 text.RecepiesMenu();
             }
-
             else
             {
                 Console.Clear();
@@ -46,7 +39,7 @@ namespace CookieMonsterAssistantByDennisByberg.Models
 
         public void MultipliRecpie(int multiplier)
         {
-            foreach(var ingredient in Ingredients)
+            foreach (var ingredient in Ingredients)
             {
                 ingredient.Multiply(multiplier);
             }

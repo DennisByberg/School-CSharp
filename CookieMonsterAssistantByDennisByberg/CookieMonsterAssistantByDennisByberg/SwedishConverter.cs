@@ -8,10 +8,13 @@
             {
                 return amount * 2.25;
             }
-
             else if (measure == "teaspoon" || measure == "teaspoons")
             {
                 return amount * 5;
+            }
+            else if (measure == "ounce" || measure == "ounces")
+            {
+                return amount * 30;
             }
             return amount;
         }
@@ -22,10 +25,13 @@
             {
                 return "dl";
             }
-
             else if (measure == "teaspoon" || measure == "teaspoons")
             {
                 return "ml";
+            }
+            else if (measure == "ounce" || measure == "ounces")
+            {
+                return "g";
             }
 
             return measure;

@@ -1,4 +1,5 @@
-﻿// ┌ ┐ └ ┘ ─ ┤ ├ ┘ └ │ ─ • « » ●
+﻿using CookieMonsterAssistantByDennisByberg_CSVReader;
+
 namespace CookieMonsterAssistantByDennisByberg.Menus
 {
     internal class Text
@@ -34,8 +35,6 @@ namespace CookieMonsterAssistantByDennisByberg.Menus
 
         internal void RecepiesMenu()
         {
-            var csv = new CSVReader();
-
             Console.WriteLine("┌───────────────────────────────────────────────┐");
             Console.WriteLine("│                                               │");
             Console.WriteLine("│                   Recepies                    │");
@@ -56,24 +55,28 @@ namespace CookieMonsterAssistantByDennisByberg.Menus
                 Console.Clear();
                 HomeMenu();
             }
-
             else if (choice.Key == ConsoleKey.B)
             {
-                var recept1 = csv.BigAndButteryChocolateChipCookiesRecipe();
+                Console.Clear();
+                var recept1 = CSVReader.BigAndButteryChocolateChipCookiesRecipe();
+                Console.Write("How many batches do you want to make?: ");
+                _ = int.TryParse(Console.ReadLine(), out int batchAmount);
+                recept1.MultipliRecpie(batchAmount);
+                Console.WriteLine("┌───────────────────────────────────────────────┐");
+                Console.WriteLine("│     Big & Buttery Chocolate Chip Cookies      │");
+                Console.WriteLine("└───────────────────────────────────────────────┘");
                 recept1.Print();
             }
-
             else
             {
                 Console.Clear();
                 RecepiesMenu();
             }
-                
         }
 
-        private void GoodbyeMenu()
+        private static void GoodbyeMenu()
         {
-            var message ="Thank you and good bye....";
+            const string message ="Thank you and good bye....";
             var counter = 0;
             for (int i = 0; i < message.Length; i++)
             {
