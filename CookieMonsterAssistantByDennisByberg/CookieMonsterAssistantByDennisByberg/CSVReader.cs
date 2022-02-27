@@ -1,12 +1,28 @@
-﻿    internal class CSVReader
-    {
-        internal void BigAndButteryChocolateChipCookiesRecipe()
-        {
-            var lines = File.ReadAllLines("BigAndButteryChocolateChipCookiesRecipe.csv");
+﻿using CookieMonsterAssistantByDennisByberg.Models;
+using System.Collections.Generic;
 
-            foreach (var line in lines)
-            {
-                Console.WriteLine(line);
-            }
+internal class CSVReader
+{
+    internal Recept BigAndButteryChocolateChipCookiesRecipe()
+    {
+        Console.Clear();
+
+        var lines = File.ReadAllLines("BigAndButteryChocolateChipCookiesRecipe.csv");
+        var startIngredients = Array.FindIndex(lines, x => x == "Ingredients:");
+        var stopIngredients = Array.FindIndex(lines, x => x == "Directions:");
+
+        var ingredients = new List<Ingredient>();
+
+        for (int i = startIngredients +1; i < stopIngredients; i++)
+        {
+            ingredients.Add(new Ingredient(lines[i]));
         }
+
+        var recept = new Recept();
+        recept.Text = lines.Take(startIngredients +1).ToArray();
+        recept.Ingredients = ingredients.ToArray();
+        recept.Directions = lines.Skip(stopIngredients).ToArray();
+
+        return recept;
     }
+}

@@ -46,13 +46,10 @@ namespace CookieMonsterAssistantByDennisByberg.Menus
             Console.WriteLine("(B)ig & Buttery Chocolate Chip Cookies"); // 1
             Console.ResetColor();
 
-            Console.WriteLine("│2] "); // 2
-            Console.WriteLine("│3] "); // 3
-            Console.WriteLine("│4] "); // 4
-            Console.WriteLine("│5] "); // 5
-            Console.WriteLine("│6] "); // 6
-            Console.WriteLine("│7] "); // 7
-            Console.WriteLine("│8] "); // 8
+            // TODO: 2a receptet...
+
+            // TODO: 3e receptet...
+
             Console.WriteLine("\n(G)o Back"); // 9
 
             var choice = Console.ReadKey();
@@ -65,7 +62,8 @@ namespace CookieMonsterAssistantByDennisByberg.Menus
 
             else if (choice.Key == ConsoleKey.B)
             {
-                csv.BigAndButteryChocolateChipCookiesRecipe();
+                var recept1 = csv.BigAndButteryChocolateChipCookiesRecipe();
+                recept1.Print();
             }
 
             else
