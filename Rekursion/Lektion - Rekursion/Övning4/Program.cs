@@ -7,9 +7,10 @@
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
             Console.CursorVisible = false;
 
-            int[] myArray = { 1, 2, 3, 9, 15 };
+            int[] myArray = { 1, 2, 3 };
             Console.WriteLine(ArraySum(myArray));
         }
+
         // Byt gärna startIndex
         public static int ArraySum(int[] array, int startIndex = 0)
         {
@@ -23,4 +24,4 @@
             return array[startIndex] + ArraySum(array, startIndex + 1);
         }
     }
-}
+} 
