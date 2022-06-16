@@ -6,7 +6,7 @@
         {
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
             Console.CursorVisible = false;
-            Console.WriteLine(Fibonacci(5));
+            Console.WriteLine(Fibonacci(44));
         }
 
         private static int Fibonacci(int n)
